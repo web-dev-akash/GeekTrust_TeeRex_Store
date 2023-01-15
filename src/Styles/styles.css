@@ -1,0 +1,288 @@
+#navBar {
+  /* border: 1px solid; */
+  background-color: #f1f0f0;
+  padding-inline: 20px;
+}
+#navBar > .menu {
+  width: auto;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+#navBar > .menu img {
+  color: black;
+  margin-right: 5%;
+}
+#cart_item_count {
+  font-size: 16px;
+  font-weight: bold;
+}
+.searchDiv {
+  margin: 40px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.searchDiv input {
+  width: 30%;
+  border: none;
+  padding-inline: 10px;
+  border-bottom: 1px solid;
+  outline: none;
+}
+.searchIconDiv {
+  cursor: pointer;
+}
+.contentDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+.contentDiv > .filter_div {
+  position: fixed;
+  left: 80px;
+  top: 100px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  height: max-content;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.checkBoxDiv {
+  width: 50%;
+  height: auto;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.checkBoxDiv > .check_box {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 7px;
+}
+.checkBoxDiv > h4 {
+  font-family: sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.check_box > label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+  position: absolute;
+}
+.check_box > input {
+  width: 15px;
+  height: 15px;
+  margin-left: -85px;
+  background-color: #979292;
+  cursor: pointer;
+}
+
+.contentDiv > .product_list_div {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 10px;
+}
+
+.product_card {
+  position: relative;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.product_card > img {
+  width: 100%;
+  height: 80%;
+}
+.product_card > .item_details {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item_details > button {
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-top: -7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.item_details > p {
+  font-weight: bold;
+}
+
+.cart_main {
+  width: 100%;
+  height: 500px;
+}
+.cart_main > p {
+  font-family: sans-serif;
+  font-size: 19px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.cart_main > .cart_content {
+  width: 50%;
+  height: 80%;
+  /* border: 1px solid blue; */
+  margin-left: 13%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: auto;
+}
+.cart_content > .cart_content_main {
+  width: 100%;
+  height: 130px;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  margin-bottom: 25px;
+}
+.cart_content_main > img {
+  width: 25%;
+  height: 100%;
+}
+.cart_content_main > .price_and_title_box {
+  width: 25%;
+  height: 50px;
+  margin-top: 10px;
+  /* border:1px solid rgb(116, 116, 0); */
+}
+.price_and_title_box > p {
+  font-family: sans-serif;
+  font-size: 19px;
+}
+.cart_content_main > .button_box {
+  width: 40%;
+  height: 70px;
+  margin-top: 20px;
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content: space-around;
+  margin-right: 15px;
+}
+.button_box > .increase_decrease_box {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* border: 1px solid magenta; */
+}
+.button_box > button {
+  width: 130px;
+  height: 40px;
+  background-color: #ff3c3c;
+  border-radius: 7px;
+  border: none;
+}
+.increase_decrease_box > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: black;
+  background-color: rgb(255, 217, 0);
+  font-size: 19px;
+}
+button {
+  cursor: pointer;
+}
+
+.no_cart_item_div > p {
+  font-size: 19px;
+  font-family: monospace;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .contentDiv > .product_list_div {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    padding: 0px;
+  }
+  .check_box > input {
+    margin-left: -70%;
+  }
+  .check_box > label {
+    font-size: 11px;
+  }
+  .checkBoxDiv {
+    width: 100%;
+  }
+  .checkBoxDiv > h4 {
+    font-size: 15px;
+  }
+  .searchDiv {
+    width: 50%;
+  }
+  .cart_main {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .cart_main > .cart_content {
+    width: 100%;
+    /* border: 1px solid blue; */
+    margin: 0px;
+  }
+  .button_box > button {
+    width: 60px;
+    height: 30px;
+    margin-top: 8px;
+  }
+  .increase_decrease_box {
+    margin-top: 6px;
+  }
+  .increase_decrease_box > button {
+    width: 40px;
+    height: 30px;
+    font-size: 19px;
+    margin-top: 3px;
+  }
+  .price_and_title_box > p {
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+  .price_and_title_box > h4 {
+    font-size: 15px;
+  }
+  .no_cart_item_div > p {
+    font-size: 17px;
+  }
+  .cart_main > p {
+    font-size: 17px;
+  }
+  .loaderImg {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .contentDiv > .product_list_div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+  .check_box > input {
+    margin-left: -70%;
+  }
+  .check_box > label {
+    font-size: 15px;
+  }
+  .checkBoxDiv {
+    width: 100%;
+  }
+  .checkBoxDiv > h4 {
+    font-size: 19px;
+  }
+}
